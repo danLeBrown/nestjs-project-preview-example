@@ -9,8 +9,8 @@ services:
       PORT: 3000
       DATABASE_URL: postgresql://root:secret@postgres:5432/nestjs_project_preview_example
       REDIS_URL: redis://redis:6379
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000
     depends_on:
       postgres:
         condition: service_healthy
