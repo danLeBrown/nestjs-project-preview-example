@@ -14,6 +14,13 @@ export class AppService {
     };
   }
 
+  previewHello(): { message: string; api: string } {
+    return {
+      message: 'Hello World!',
+      api: 'nestjs-project-preview-example',
+    };
+  }
+
   async getStats(): Promise<{ requestCount: number; timestamp: string }> {
     const raw = await this.redis.get(STATS_KEY);
     const count = raw ? parseInt(raw, 10) + 1 : 1;
