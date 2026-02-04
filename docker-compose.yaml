@@ -1,6 +1,5 @@
 services:
-  nestjsprojectpreviewexample:
-    image: nestjsprojectpreviewexample
+  app:
     build:
       context: .
       dockerfile: ./Dockerfile
